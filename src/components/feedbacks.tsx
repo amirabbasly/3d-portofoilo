@@ -70,8 +70,8 @@ export const Feedbacks = () => {
         >
           {/* Title */}
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>What others say</p>
-            <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+            <p className={styles.sectionSubText}>What Others Say</p>
+            <h2 className={styles.sectionHeadText}>Testimonials</h2>
           </motion.div>
         </div>
 

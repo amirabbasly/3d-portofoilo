@@ -5,7 +5,7 @@ import { logo, menu, close } from "../assets";
 import { NAV_LINKS } from "../constants";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
-
+import resume from "../assets/AASQF404.pdf";
 type NavbarProps = {
   hide: boolean;
 };
@@ -41,20 +41,23 @@ export const Navbar = ({ hide }: NavbarProps) => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Shubham&nbsp;<span className="sm:block hidden">| Developer</span>
-          </p>
-        </Link>
 
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex items-center">
+            <a
+              href={resume}
+              download
+              className="relative inline-block px-4 py-2 border border-white rounded-md
+               transition-all duration-300 ease-in-out
+               hover:bg-white hover:text-primary
+               before:absolute before:inset-0 before:bg-white before:opacity-0 before:rounded-md
+               before:transition-opacity before:duration-300 hover:before:opacity-10"
+            >
+              Download CV
+            </a>
+          </p>
+        </div>
         {/* Nav Links (Desktop) */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {NAV_LINKS.map((link) => (

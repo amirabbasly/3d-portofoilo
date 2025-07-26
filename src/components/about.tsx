@@ -46,19 +46,23 @@ export const About = () => {
         {/* Title */}
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Introduction</p>
-          <h2 className={styles.sectionHeadText}>Overview.</h2>
+          <h2 className={styles.sectionHeadText}>About Me</h2>
         </motion.div>
 
         {/* Body */}
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          I'm a skilled website developer with experience in TypeScript and
-          Javascript, and expertise in frameworks like React, Node.js, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+          I am Amirabbas Soleymani Qarakhlu, a world-class Full-Stack Engineer,
+          Product Builder, and Digital Innovator with over 4 years of hands-on
+          experience in more than 15 high-impact web and mobile applications. I
+          have deep expertise in modern front-end ecosystems (React, Next.js,
+          Vue) as well as back-end (Node.js, TypeScript, PostgreSQL, MongoDB),
+          DevOps (Docker, CI/CD), scalable architecture, and cross-platform
+          mobile development. My focus is on SEO, performance optimization, and
+          writing clean, maintainable code aligned with global engineering
+          standards.
         </motion.p>
 
         {/* Service Card */}

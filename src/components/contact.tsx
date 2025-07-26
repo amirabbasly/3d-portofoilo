@@ -1,7 +1,7 @@
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useState, useRef, type FormEvent, type ChangeEvent } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -56,7 +56,7 @@ export const Contact = () => {
     const email_regex =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // valiate email
+    // validate email
     if (!email.trim().toLowerCase().match(email_regex)) {
       emailError.classList.remove("hidden");
       current["email"] = false;
@@ -98,14 +98,14 @@ export const Contact = () => {
         import.meta.env.VITE_APP_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Shubham",
+          to_name: "Amirabbas",
           from_email: form.email.trim().toLowerCase(),
           to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_KEY,
       )
-      .then(() => toast.success("Thanks for contacting me."))
+      .then(() => toast.success("Thank you for contacting me."))
       .catch((error) => {
         // Error handle
         console.log("[CONTACT_ERROR]: ", error);
@@ -129,8 +129,8 @@ export const Contact = () => {
           className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
           {/* Title */}
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <p className={styles.sectionSubText}>Get in Touch</p>
+          <h3 className={styles.sectionHeadText}>Contact Information</h3>
 
           {/* Form */}
           <form
@@ -147,7 +147,7 @@ export const Contact = () => {
                 id="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="Amirabbas Soleymani"
                 title="What's your name?"
                 disabled={loading}
                 aria-disabled={loading}
@@ -169,7 +169,7 @@ export const Contact = () => {
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="johndoe@email.com"
+                placeholder="amirabas.sly@gmail.com"
                 title="What's your email?"
                 disabled={loading}
                 aria-disabled={loading}
@@ -178,7 +178,7 @@ export const Contact = () => {
 
               {/* Invalid Email */}
               <span className="text-red-400 mt-2 hidden" id="email-error">
-                Invalid E-mail!
+                Invalid Email!
               </span>
             </label>
 
@@ -191,7 +191,7 @@ export const Contact = () => {
                 id="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Hello there!"
+                placeholder="Hello!"
                 title="What do you want to say?"
                 disabled={loading}
                 aria-disabled={loading}
